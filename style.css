@@ -1,20 +1,57 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+  background: #f9fbfd;
+  color: #222;
 }
 
 .tabla {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(3, 74, 140, 0.1);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .tabla th, .tabla td {
   border: 1px solid #ccc;
   padding: 6px;
   text-align: center;
+  font-size: 14px;
 }
 
 .tabla th {
-  background-color: #f0f0f0;
+  background-color: #034a8c;
+  color: white;
+  font-weight: 600;
+  user-select: none;
+}
+
+.tabla tbody tr.selected {
+  background-color: #c8dafc; /* azul claro para filas seleccionadas */
+  transition: background-color 0.3s ease;
+}
+
+.tabla tbody tr:hover {
+  background-color: #e6f0ff;
+  cursor: pointer;
+}
+
+select {
+  padding: 6px 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #88a6c7;
+  border-radius: 6px;
+  background: #e9f0fa;
+  color: #034a8c;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
