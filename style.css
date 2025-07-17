@@ -3,28 +3,18 @@ body {
   margin: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 100px repeat(6, 1fr);
-  grid-auto-rows: 50px;
-  margin-top: 20px;
-  border: 1px solid #ccc;
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-.grid div {
+.tabla th, .tabla td {
   border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
+  padding: 6px;
+  text-align: center;
 }
 
-.grid .hora {
+.tabla th {
   background-color: #f0f0f0;
-  font-weight: bold;
-}
-
-.grid .dia {
-  background-color: #e0e0ff;
-  font-weight: bold;
 }
