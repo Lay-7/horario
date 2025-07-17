@@ -251,10 +251,17 @@ function mostrarMaterias() {
     ? materias
     : materias.filter(m => m.grupo === grupoSeleccionado);
 
-  filtradas.forEach((m, i) => {
+  filtradas.forEach((m) => {
+    const index = materias.indexOf(m);
     const fila = document.createElement("tr");
+
+    // Ver si esta materia ya está seleccionada en el horario
+    const seleccionada = document.getElementById(`fila-${index}`) !== null;
+
+    fila.classList.toggle("selected", seleccionada);
+
     fila.innerHTML = `
-      <td><input type="checkbox" onchange="toggleMateria(${materias.indexOf(m)})"></td>
+      <td><input type="checkbox" id="chk-${index}" onchange="toggleMateria(${index})" ${seleccionada ? "checked" : ""}></td>
       <td>${m.grupo}</td>
       <td>${m.asignatura}</td>
       <td>${m.profesor}</td>
@@ -272,8 +279,12 @@ function toggleMateria(index) {
   const id = `fila-${index}`;
   const existente = document.getElementById(id);
 
+  const checkbox = document.getElementById(`chk-${index}`);
+  const filaMateria = checkbox.closest("tr");
+
   if (existente) {
     existente.remove();
+    filaMateria.classList.remove("selected");
   } else {
     const fila = document.createElement("tr");
     fila.id = id;
@@ -286,6 +297,7 @@ function toggleMateria(index) {
       ${dias.map(d => `<td>${materia.horarios[d] || ""}</td>`).join("")}
     `;
     tabla.appendChild(fila);
+    filaMateria.classList.add("selected");
   }
 }
 
