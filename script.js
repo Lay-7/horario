@@ -524,9 +524,9 @@ function seSuperpone(h1, h2) {
 }
 
 function descargarHorarioComoImagen() {
-  const horario = document.getElementById("tablaHorario");
+  const contenedor = document.getElementById("contenedorHorario");
 
-  html2canvas(horario).then(canvas => {
+  html2canvas(contenedor).then(canvas => {
     const link = document.createElement("a");
     link.download = "mi_horario.png";
     link.href = canvas.toDataURL("image/png");
