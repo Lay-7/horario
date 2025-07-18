@@ -533,3 +533,18 @@ function descargarHorarioComoImagen() {
     link.click();
   });
 }
+
+function deshacerSeleccion() {
+  // Quitar todas las materias del horario
+  document.getElementById("tablaHorario").innerHTML = "";
+
+  // Desmarcar todos los checkboxes
+  document.querySelectorAll('#tablaMaterias input[type="checkbox"]').forEach(cb => {
+    cb.checked = false;
+  });
+
+  // Quitar sombreado azul de filas seleccionadas
+  document.querySelectorAll('#tablaMaterias tr.selected').forEach(fila => {
+    fila.classList.remove('selected');
+  });
+}
