@@ -294,27 +294,53 @@ function toggleMateria(index) {
   const tabla = document.getElementById("tablaHorario");
   const id = `fila-${index}`;
   const existente = document.getElementById(id);
-
   const checkbox = document.getElementById(`chk-${index}`);
   const filaMateria = checkbox.closest("tr");
 
   if (existente) {
     existente.remove();
     filaMateria.classList.remove("selected");
-  } else {
-    const fila = document.createElement("tr");
-    fila.id = id;
-    fila.innerHTML = `
-      <td>${materia.grupo}</td>
-      <td>${materia.asignatura}</td>
-      <td>${materia.profesor}</td>
-      <td>${materia.edificio}</td>
-      <td>${materia.salon}</td>
-      ${dias.map(d => `<td>${materia.horarios[d] || ""}</td>`).join("")}
-    `;
-    tabla.appendChild(fila);
-    filaMateria.classList.add("selected");
+    return;
   }
+
+  // Verificar si hay conflicto
+  const conflictos = [];
+
+  dias.forEach(dia => {
+    const nuevoHorario = materia.horarios[dia];
+    if (!nuevoHorario) return;
+
+    // Revisar materias ya agregadas
+    for (let fila of tabla.rows) {
+      const otraMateria = materias.find(m => `fila-${materias.indexOf(m)}` === fila.id);
+      if (!otraMateria || !otraMateria.horarios[dia]) continue;
+
+      const existenteHorario = otraMateria.horarios[dia];
+      if (seSuperpone(nuevoHorario, existenteHorario)) {
+        conflictos.push(`${dia.toUpperCase()} ${nuevoHorario} con ${otraMateria.asignatura} (${existenteHorario})`);
+      }
+    }
+  });
+
+  if (conflictos.length > 0) {
+    alert("⚠️ Conflicto de horario detectado:\n\n" + conflictos.join("\n"));
+    checkbox.checked = false;
+    return;
+  }
+
+  // Si no hay conflicto, agregar la materia
+  const fila = document.createElement("tr");
+  fila.id = id;
+  fila.innerHTML = `
+    <td>${materia.grupo}</td>
+    <td>${materia.asignatura}</td>
+    <td>${materia.profesor}</td>
+    <td>${materia.edificio}</td>
+    <td>${materia.salon}</td>
+    ${dias.map(d => `<td>${materia.horarios[d] || ""}</td>`).join("")}
+  `;
+  tabla.appendChild(fila);
+  filaMateria.classList.add("selected");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -322,3 +348,9 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarMaterias();
   document.getElementById("grupoFiltro").addEventListener("change", mostrarMaterias);
 });
+
+function seSuperpone(h1, h2) {
+  const [i1, f1] = h1.split("-").map(t => parseInt(t.replace(":", "")));
+  const [i2, f2] = h2.split("-").map(t => parseInt(t.replace(":", "")));
+  return i1 < f2 && i2 < f1;
+}
