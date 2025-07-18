@@ -31,7 +31,7 @@ body {
 
 .tabla tbody tr.selected,
 .tabla tbody tr.selected td {
-  background-color: #c8dafc !important;
+  background-color: #b6cfff !important;
   transition: background-color 0.3s ease;
 }
 
