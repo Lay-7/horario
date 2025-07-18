@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
 const materias = [
   {
     grupo: "4NM40",
@@ -521,4 +523,15 @@ function seSuperpone(h1, h2) {
   const [i1, f1] = h1.split("-").map(t => parseInt(t.replace(":", "")));
   const [i2, f2] = h2.split("-").map(t => parseInt(t.replace(":", "")));
   return i1 < f2 && i2 < f1;
+}
+
+function descargarHorarioComoImagen() {
+  const horario = document.getElementById("tablaHorario");
+
+  html2canvas(horario).then(canvas => {
+    const link = document.createElement("a");
+    link.download = "mi_horario.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  });
 }
