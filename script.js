@@ -1,4 +1,20 @@
 const materias = [
+  {
+    grupo: "4NM40",
+    asignatura: "ADQUISICIÓN DE DATOS",
+    profesor: "ORTIZ CASTREJON NANCY LORENA",
+    edificio: "CI",
+    salon: "000",
+    horarios: { mar: "11:00-13:00", jue: "11:00-13:00" }
+  },
+  {
+    grupo: "4NM41",
+    asignatura: "ADQUISICIÓN DE DATOS",
+    profesor: "CASILLAS RIVAS ALEJANDRO",
+    edificio: "CI",
+    salon: "000",
+    horarios: { lun: "13:00-15:00", mie: "13:00-15:00" }
+  },
   // Grupo 5NM50
   {
     grupo: "5NM50",
@@ -242,6 +258,158 @@ const materias = [
     edificio: "CI",
     salon: "000",
     horarios: { lun: "13:00-15:00", mie: "13:00-14:00" }
+  },
+  // Grupo 5NV50
+  { grupo: "5NV50", 
+    asignatura: "ÁLGEBRA LINEAL", 
+    profesor: "BENITEZ LOPEZ RUBEN", 
+    edificio: "CB", 
+    salon: "000", 
+    horarios: { mar: "18:00-20:00", mie: "18:00-20:00" } 
+  },
+  { grupo: "5NV50", 
+    asignatura: "MÉTODOS NUMÉRICOS", 
+    profesor: "GORDILLO RIVAS KARLA YOLANDA", 
+    edificio: "CB", 
+    salon: "000", 
+    horarios: { mar: "20:00-22:00", jue: "20:00-22:00" } 
+  },
+  { grupo: "5NV50", 
+    asignatura: "CONTABILIDAD FINANCIERA Y DE COSTOS", 
+    profesor: "GONZALEZ RIVERA YESSICA ANNEL", 
+    edificio: "X", 
+    salon: "X", 
+    horarios: { mie: "14:00-16:00", jue: "16:00-18:00" } 
+  },
+  { grupo: "5NV50", 
+    asignatura: "APLICACIÓN DE LA CIENCIA ECONÓMICA",
+    profesor: "DIAZ DIAZ ENRIQUE", 
+    edificio: "CS", 
+    salon: "000", 
+    horarios: { mie: "20:00-22:00", vie: "20:00-22:00" } 
+  },
+  { grupo: "5NV50", 
+    asignatura: "TEORÍA DE LA COMPUTACIÓN Y COMPILADORES", 
+    profesor: "MORTERA ZENTENO CARLOS", 
+    edificio: "CI", 
+    salon: "000", 
+    horarios: { lun: "16:00-18:00", vie: "18:00-20:00" } 
+  },
+  { grupo: "5NV50", 
+    asignatura: "COMUNICACIÓN DE DATOS", 
+    profesor: "ORTIZ CASTREJON NANCY LORENA", 
+    edificio: "CI", 
+    salon: "000", 
+    horarios: { mar: "14:00-16:00", jue: "14:00-16:00" } 
+  },
+  { grupo: "5NV50", 
+    asignatura: "PROGRAMACIÓN WEB", 
+    profesor: "VIERA HARO JORGE", 
+    edificio: "CI", 
+    salon: "000", 
+    horarios: { mar: "16:00-18:00", mie: "16:00-18:00" } 
+  },
+
+  // Grupo 5NV51
+  { grupo: "5NV51", 
+    asignatura: "ÁLGEBRA LINEAL",
+    profesor: "GORDILLO RIVAS KARLA YOLANDA", 
+    edificio: "CB", 
+    salon: "000", 
+    horarios: { lun: "14:00-16:00", vie: "14:00-16:00" } 
+  },
+  { grupo: "5NV51",
+    asignatura: "MÉTODOS NUMÉRICOS", 
+    profesor: "RODRIGUEZ JIMENEZ RAMON", 
+    edificio: "CB", 
+    salon: "000", 
+    horarios: { lun: "18:00-20:00", mie: "18:00-20:00" } 
+  },
+  { grupo: "5NV51", 
+    asignatura: "CONTABILIDAD FINANCIERA Y DE COSTOS", 
+    profesor: "GONZALEZ RIVERA YESSICA ANNEL", 
+    edificio: "X", 
+    salon: "X", 
+    horarios: { lun: "16:00-18:00", mie: "16:00-18:00" } 
+  },
+  { grupo: "5NV51",
+    asignatura: "APLICACIÓN DE LA CIENCIA ECONÓMICA", 
+    profesor: "ARELLANO LOPEZ ANA VELIA", 
+    edificio: "CS", 
+    salon: "000", 
+    horarios: { mar: "16:00-18:00", jue: "14:00-16:00" } 
+  },
+  { grupo: "5NV51",
+    asignatura: "TEORÍA DE LA COMPUTACIÓN Y COMPILADORES", 
+    profesor: "MORTERA ZENTENO CARLOS", 
+    edificio: "CI", 
+    salon: "000", 
+    horarios: { lun: "20:00-22:00", vie: "20:00-22:00" } 
+  },
+  { grupo: "5NV51", 
+    asignatura: "COMUNICACIÓN DE DATOS", 
+    profesor: "MENESES GONZALEZ RAYMUNDO", 
+    edificio: "CI", 
+    salon: "000", 
+    horarios: { mar: "18:00-20:00", vie: "18:00-20:00" } 
+  },
+  { grupo: "5NV51", 
+    asignatura: "PROGRAMACIÓN WEB", 
+    profesor: "CASTRO MENDEZ GILBERTO SAUL", 
+    edificio: "CI", 
+    salon: "000", 
+    horarios: { mar: "14:00-16:00", mie: "14:00-16:00" } 
+  },
+
+  // Grupo 5NV52
+  { grupo: "5NV52", 
+    asignatura: "ÁLGEBRA LINEAL", 
+    profesor: "CERON VILLEGAS MIGUEL", 
+    edificio: "CB", 
+    salon: "000", 
+    horarios: { mar: "20:00-22:00", vie: "20:00-22:00" } 
+  },
+  { grupo: "5NV52", 
+    asignatura: "MÉTODOS NUMÉRICOS", 
+    profesor: "RODRIGUEZ JIMENEZ RAMON", 
+    edificio: "CB", 
+    salon: "000", 
+    horarios: { mie: "20:00-22:00", vie: "18:00-20:00" } 
+  },
+  { grupo: "5NV52", 
+    asignatura: "CONTABILIDAD FINANCIERA Y DE COSTOS", 
+    profesor: "GARCIA RODRIGUEZ MONICA ELIZABETH", 
+    edificio: "CS", 
+    salon: "000", 
+    horarios: { mar: "18:00-20:00", mie: "18:00-20:00" } 
+  },
+  { grupo: "5NV52", 
+    asignatura: "APLICACIÓN DE LA CIENCIA ECONÓMICA",
+    profesor: "TELLO NOLASCO J. APOLINAR ALFONSO", 
+    edificio: "CS", 
+    salon: "000", 
+    horarios: { mar: "14:00-16:00", mie: "14:00-16:00" } 
+  },
+  { grupo: "5NV52",
+    asignatura: "TEORÍA DE LA COMPUTACIÓN Y COMPILADORES",
+    profesor: "LUQUE MARQUEZ FERNANDO",
+    edificio: "CI",
+    salon: "000",
+    horarios: { lun: "14:00-16:00", vie: "14:00-16:00" } 
+  },
+  { grupo: "5NV52",
+    asignatura: "COMUNICACIÓN DE DATOS",
+    profesor: "MARTINEZ TLAHUEL MIGUEL A.",
+    edificio: "CI",
+    salon: "000",
+    horarios: { mar: "16:00-18:00", mie: "16:00-18:00" }
+  },
+  { grupo: "5NV52",
+    asignatura: "PROGRAMACIÓN WEB",
+    profesor: "CASTRO MENDEZ GILBERTO SAUL",
+    edificio: "CI",
+    salon: "000",
+    horarios: { lun: "16:00-18:00", jue: "18:00-20:00" } 
   }
 ];
 
