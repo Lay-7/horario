@@ -29,8 +29,9 @@ body {
   user-select: none;
 }
 
-.tabla tbody tr.selected {
-  background-color: #c8dafc; /* azul claro para filas seleccionadas */
+.tabla tbody tr.selected,
+.tabla tbody tr.selected td {
+  background-color: #c8dafc !important;
   transition: background-color 0.3s ease;
 }
 
