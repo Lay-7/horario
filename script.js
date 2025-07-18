@@ -227,6 +227,22 @@ const materias = [
     salon: "000",
     horarios: { jue: "07:00-09:00", vie: "07:00-09:00" }
   }
+  {
+    grupo: "5NM57",
+    asignatura: "ESCENARIOS VIRTUALES",
+    profesor: "BUSTAMANTE TRANQUILINO ROCIO",
+    edificio: "CI",
+    salon: "000",
+    horarios: { lun: "11:00-13:00", jue: "11:00-12:00" }
+  },
+  {
+    grupo: "5NM58",
+    asignatura: "HACKEO ÉTICO",
+    profesor: "SANDOVAL GONZALEZ VICTOR L.",
+    edificio: "CI",
+    salon: "000",
+    horarios: { lun: "13:00-15:00", mie: "13:00-14:00" }
+  },
 ];
 
 const dias = ["lun", "mar", "mie", "jue", "vie", "sab"];
