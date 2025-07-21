@@ -15,6 +15,14 @@ const materias = [
     salon: "000",
     horarios: { lun: "13:00-15:00", mie: "13:00-15:00" }
   },
+  {
+    grupo: "4NV42",
+    asignatura: "ADQUISICIÓN DE DATOS",
+    profesor: "CHAVEZ PEREZ JOSE LUIS",
+    edificio: "CI",
+    salon: "000",
+    horarios: { lun: "14:00-16:00", mie: "14:00-16:00	" }
+  },
   // Grupo 5NM50
   {
     grupo: "5NM50",
