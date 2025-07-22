@@ -233,7 +233,7 @@ const materias = [
     profesor: "MENDEZ GARCIA SARA",
     edificio: "CI",
     salon: "000",
-    horarios: { mar: "09:00-11:00", vie: "09:00-11:00" }
+    horarios: { mar: "09:00-11:00", jue: "09:00-11:00" }
   },
   {
     grupo: "5NM53",
