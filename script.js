@@ -62,7 +62,7 @@ const materias = [
     profesor: "X RODRIGUEZ JOSE LUIS",
     edificio: "CI",
     salon: "000",
-    horarios: { mar: "11:00-13:00", sab: "09:00-11:00" }
+    horarios: { mar: "11:00-13:00", vie: "09:00-11:00" }
   },
   {
     grupo: "5NM50",
@@ -176,7 +176,7 @@ const materias = [
     profesor: "JESUS CARRILLO CARLOS",
     edificio: "CI",
     salon: "000",
-    horarios: { mar: "09:00-11:00", vie: "09:00-11:00" }
+    horarios: { mar: "09:00-11:00", jue: "09:00-11:00" }
   },
   {
     grupo: "5NM52",
